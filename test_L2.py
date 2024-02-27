@@ -1,8 +1,8 @@
 import unittest
-from  L2 import search_the_largest_k
+from L2 import search_the_largest_k
 
 
-class TestBubbleSort(unittest.TestCase):
+class TestQuickSort(unittest.TestCase):
     def test_sorted_array(self):
         self.assertEqual(search_the_largest_k([1, 22, 3, 43, 5], 2), (22, 1))
 
@@ -16,7 +16,11 @@ class TestBubbleSort(unittest.TestCase):
         self.assertEqual(search_the_largest_k([], 3), None)
 
     def test_length_of_arr_less_than_k(self):
-        self.assertEqual(search_the_largest_k([4, 2, 5, 10, 11, 12],8), None)
+        self.assertEqual(search_the_largest_k([4, 2, 5, 10, 11, 12], 8), None)
+
+    def test_k5_of_arr_k(self):
+        self.assertEqual(search_the_largest_k([1, 7, -1, 2, 9, 21, 5, 8, 9, 25], 2), (21,5))
+
 
 if __name__ == '__main__':
     unittest.main()
